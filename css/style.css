@@ -1,0 +1,75 @@
+body {
+  font-family: -apple-system, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+}
+
+section.index-toDo {
+  padding: 10% 10px 10px;
+  max-width: 400px;
+}
+
+h1.index-toDo__title {
+  font-size: 32px;
+  text-align: left;
+}
+
+div.index-toDo__add,
+li.toDo__list-item {
+  width: 100%;
+  height: 28px;
+  border: 2px solid #000;
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin: 12px 0;
+}
+
+input.index-toDo-input {
+  outline: none;
+  border: none;
+  width: 80%;
+  color: #e6e6e6;
+}
+
+input.index-toDo-input:focus {
+  color: #000;
+}
+
+div.index-toDo-divider {
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  margin: 0 0 24px 0;
+}
+
+div.toDo__list-item__icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  background-color: #000;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+div.toDo__list-item__icon span {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 0.8;
+}
+
+@media only screen and (min-width: 400px) {
+  section.index-toDo {
+    position: fixed;
+    width: 400px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
