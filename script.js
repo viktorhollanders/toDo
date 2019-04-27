@@ -13,7 +13,7 @@ function createElement() {
   toDoItem.classList.add("toDo__list-item");
   toDoIcon.classList.add("toDo__list-item__icon");
 
-  toDoText.textContent = input.textContent;
+  toDoText.textContent = inputTag.value;
   toDoIconMinus.textContent = "-";
 
   toDoItem.appendChild(toDoText);
