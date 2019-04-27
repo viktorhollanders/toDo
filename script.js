@@ -1,5 +1,5 @@
 const addBtn = document.querySelector("div.add-button span");
-const input = document.querySelector("input.ndex-toDo-input");
+const inputTag = document.querySelector(`input.index-toDo-input[type="text"]`);
 
 // This function creates the new toDo list item
 function createElement() {

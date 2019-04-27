@@ -31,7 +31,11 @@ input.index-toDo-input {
   outline: none;
   border: none;
   width: 80%;
-  color: #e6e6e6;
+  color: #000;
+}
+
+input::placeholder {
+  color: #ccc;
 }
 
 input.index-toDo-input:focus {
