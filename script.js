@@ -9,11 +9,14 @@ function createElement() {
   let toDoIcon = document.createElement("div");
   let toDoIconMinus = document.createElement("span");
 
-  //styling up the html for the toDo list item
+  // styling up the html for the toDo list item
   toDoItem.classList.add("toDo__list-item");
   toDoIcon.classList.add("toDo__list-item__icon");
 
+  // add text to the list itme
   toDoText.textContent = inputTag.value;
+
+  // toDo item delet button
   toDoIconMinus.textContent = "-";
 
   toDoItem.appendChild(toDoText);
