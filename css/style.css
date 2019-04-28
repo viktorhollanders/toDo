@@ -73,7 +73,6 @@ div.toDo__list-item__icon span {
     position: fixed;
     width: 400px;
     top: 10%;
-    left: calc(100% / 4);
-    
+    left: calc(100vw / 4);
   }
 }
