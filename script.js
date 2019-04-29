@@ -12,6 +12,7 @@ function createElement() {
   // styling up the html for the toDo list item
   toDoItem.classList.add("toDo__list-item");
   toDoIcon.classList.add("toDo__list-item__icon", "minus");
+  toDoIconMinus.classList.add("minus");
 
   // add text to the list itme
   toDoText.textContent = inputTag.value;
