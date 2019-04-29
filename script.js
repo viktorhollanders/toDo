@@ -11,7 +11,7 @@ function createElement() {
 
   // styling up the html for the toDo list item
   toDoItem.classList.add("toDo__list-item");
-  toDoIcon.classList.add("toDo__list-item__icon");
+  toDoIcon.classList.add("toDo__list-item__icon", "minus");
 
   // add text to the list itme
   toDoText.textContent = inputTag.value;
@@ -27,6 +27,16 @@ function createElement() {
   document.getElementById("index-toDo__list").appendChild(toDoItem);
 }
 
+// when addBtn is clicked it ads an todo list item
 addBtn.addEventListener("click", function() {
   createElement();
 });
+
+//delet event listener event buble
+document
+  .getElementById("index-toDo__list")
+  .addEventListener("click", function(e) {
+    if (e.target && e.target.matches("div.minus")) {
+      console.log("close btn was clicked");
+    }
+  });
