@@ -41,4 +41,3 @@ document
     }
   });
 
-/// chek if git works as it should
