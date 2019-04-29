@@ -40,3 +40,5 @@ document
       console.log("close btn was clicked");
     }
   });
+
+/// chek if git works as it should
