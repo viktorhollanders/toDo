@@ -30,3 +30,12 @@ function createElement() {
 addBtn.addEventListener("click", function() {
   createElement();
 });
+
+//delet event listener event buble
+document
+  .getElementById("index-toDo__list")
+  .addEventListener("click", function(e) {
+    if (e.target && e.target.matches("div.minus")) {
+      console.log("close btn was clicked");
+    }
+  });
