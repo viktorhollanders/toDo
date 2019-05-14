@@ -35,10 +35,8 @@ addBtn.addEventListener("click", function () {
 function remove(e) {
   if (e.target.classList.contains("btn")) {
     const element = e.target.parentElement.parentElement;
-    element.remove() && element.children.remove() && element.textContent.remove();
+    element.remove() && element.children.remove() && this.textContent.remove();
   }
 }
 //when I click the deletBtn remove the element
 document.addEventListener("click", remove, false);
-
-
