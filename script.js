@@ -28,14 +28,18 @@ function createElement() {
   document.getElementById("index-toDo__list").appendChild(toDoItem);
 }
 
-addBtn.addEventListener("click", function() {
+addBtn.addEventListener("click", function () {
   createElement();
 });
 
-//when I click the deletBtn log something to the console
-
-document.addEventListener("click", function(e) {
+function remove(e) {
+  toDoItem = document.querySelectorAll("div.toDo__list-item, div.toDo__list-item p, toDo__list-item__icon, minus");
   if (e.target.classList.contains("minus")) {
-    console.log("I was clicked");
+    toDoItem.forEach(item => item.remove());
   }
-});
+}
+
+//when I click the deletBtn log something to the console
+document.addEventListener("click", remove, false);
+
+
