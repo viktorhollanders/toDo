@@ -12,7 +12,7 @@ function createElement() {
   // styling up the html for the toDo list item
   toDoItem.classList.add("toDo__list-item");
   toDoIcon.classList.add("toDo__list-item__icon", "minus");
-  toDoIconMinus.classList.add("minus");
+  toDoIconMinus.classList.add("btn");
 
   // add text to the list itme
   toDoText.textContent = inputTag.value;
@@ -33,13 +33,12 @@ addBtn.addEventListener("click", function () {
 });
 
 function remove(e) {
-  toDoItem = document.querySelectorAll("div.toDo__list-item, div.toDo__list-item p, toDo__list-item__icon, minus");
-  if (e.target.classList.contains("minus")) {
-    toDoItem.forEach(item => item.remove());
+  if (e.target.classList.contains("btn")) {
+    const element = e.target.parentElement.parentElement;
+    element.remove() && element.children.remove() && element.textContent.remove();
   }
 }
-
-//when I click the deletBtn log something to the console
+//when I click the deletBtn remove the element
 document.addEventListener("click", remove, false);
 
 
