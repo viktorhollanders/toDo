@@ -28,8 +28,11 @@ function createElement() {
   document.getElementById("index-toDo__list").appendChild(toDoItem);
 }
 
-addBtn.addEventListener("click", function () {
-  createElement();
+addBtn.addEventListener("click", createElement);
+document.addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    createElement();
+  }
 });
 
 function remove(e) {
