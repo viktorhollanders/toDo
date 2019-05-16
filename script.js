@@ -30,13 +30,15 @@ function createElement() {
 
 addBtn.addEventListener("click", createElement);
 
-document.addEventListener("keyup", function (e) {
+document.addEventListener("keyup", enter);
+
+function enter(e) {
   if (e.shiftKey && e.key == "Enter") {
     document.createElement("br");
   } else if (e.key == "Enter") {
     createElement();
   }
-});
+}
 
 function remove(e) {
   if (e.target.classList.contains("btn")) {
