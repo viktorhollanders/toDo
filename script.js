@@ -29,6 +29,9 @@ function createElement() {
   document.getElementById("toDo__list").appendChild(toDoItem);
 }
 
+//when the key enter key is pressed it runs a function enter that checks if
+//the enter AND the shift key have ben pressed, then it makes a new line in the teaxarea
+//or if it was just the enter key and then it adds the toDo list item to the to do list.
 function enter(e) {
   if (e.shiftKey && e.key == "Enter") {
     document.createElement("br");
@@ -37,6 +40,8 @@ function enter(e) {
   }
 }
 
+//when I click the deletBtn remove the element
+//this event listener uses event bubeling
 function removeItem(e) {
   if (e.target.classList.contains("btn")) {
     const element = e.target.parentElement.parentElement;
@@ -45,15 +50,7 @@ function removeItem(e) {
   }
 }
 
-//creates the new to do list item and appends it to the end of the toDo list
 addBtn.addEventListener("click", createElement);
-
-//when the key enter key is pressed it runsa function enter that checks if
-//the enter AND the shift key have ben pressed, then it makes a new line in the teaxarea
-//or if it was just the enter key and then it adds the toDo list item to the to do list.
 document.addEventListener("keyup", enter);
-
-//when I click the deletBtn remove the element
-//this event listener uses event bubeling
 document.addEventListener("click", removeItem, false);
 
