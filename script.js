@@ -1,5 +1,5 @@
 const addBtn = document.querySelector("div.add-button span");
-const inputTag = document.querySelector(`input.index-toDo-input[type="text"]`);
+const textareaTag = document.querySelector("textarea.toDo-input");
 
 // This function creates the new toDo list item
 function createElement() {
@@ -11,11 +11,11 @@ function createElement() {
 
   // styling up the html for the toDo list item
   toDoItem.classList.add("toDo__list-item");
-  toDoIcon.classList.add("toDo__list-item__icon", "minus");
+  toDoIcon.classList.add("toDo-item__icon", "minus");
   toDoIconMinus.classList.add("btn");
 
   // add text to the list itme
-  toDoText.textContent = inputTag.value;
+  toDoText.textContent = textareaTag.value;
 
   // toDo item delet button
   toDoIconMinus.textContent = "-";
@@ -25,15 +25,16 @@ function createElement() {
   toDoIcon.appendChild(toDoIconMinus);
 
   //adds the toDo list item to the toDo list
-  document.getElementById("index-toDo__list").appendChild(toDoItem);
+  document.getElementById("toDo__list").appendChild(toDoItem);
 }
 
 addBtn.addEventListener("click", createElement);
-document.addEventListener("keyup", function (e) {
-  if (e.key == "Enter") {
-    createElement();
-  }
-});
+
+// document.addEventListener("keyup", function (e) {
+//   if (e.key == "Enter") {
+//     createElement();
+//   }
+// });
 
 function remove(e) {
   if (e.target.classList.contains("btn")) {

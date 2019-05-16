@@ -3,8 +3,10 @@ body {
   font-size: 12px;
 }
 
-section.index-toDo {
-  padding: 10% 10px 10px;
+section.index-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10px;
   max-width: 400px;
 
   display: flex;
@@ -12,16 +14,20 @@ section.index-toDo {
   align-items: center;
 }
 
-h1.index-toDo__title {
+section.toDo {
+  margin-top: 80px;
+}
+
+h1.toDo-item__title {
   font-size: 32px;
   text-align: left;
   width: 100%;
 }
 
-div.index-toDo__add,
+div.toDo-item__add,
 div.toDo__list-item {
   width: 100%;
-  height: 30px;
+  min-height: 30px;
   border: 2px solid #000;
   border-radius: 6px;
 
@@ -32,29 +38,34 @@ div.toDo__list-item {
   margin: 12px 0;
 }
 
-input.index-toDo-input {
-  outline: none;
-  border: none;
-  width: 80%;
+textarea.toDo-input {
+  width: 90%;
   color: #000;
+  background: none;
+  border: none;
+  outline: none;
+  overflow: auto;
+  resize: none;
+  padding: 0;
+  margin-left: 4px;
 }
 
-input::placeholder {
+textarea::placeholder {
   color: #ccc;
 }
 
-input.index-toDo-input:focus {
+textarea.toDo-input:focus {
   color: #000;
 }
 
-div.index-toDo-divider {
+div.divider {
   height: 2px;
   width: 100%;
   background-color: #000;
   margin: 0 0 24px 0;
 }
 
-div.toDo__list-item__icon {
+div.toDo-item__icon {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -66,14 +77,16 @@ div.toDo__list-item__icon {
   align-content: center;
 }
 
-div.toDo__list-item__icon span {
+div.toDo-item__icon span {
+  width: 20px;
+  height: 20px;
   color: #fff;
   text-align: center;
   font-size: 18px;
-  line-height: 0.9;
+  line-height: 1;
 }
 
-#index-toDo__list {
+#toDo__list {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -81,7 +94,7 @@ div.toDo__list-item__icon span {
 }
 
 @media only screen and (min-width: 414px) {
-  section.index-toDo {
+  section.index-content {
     position: relative;
     width: 400px;
     left: 50%;
