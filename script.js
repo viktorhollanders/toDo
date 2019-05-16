@@ -31,10 +31,10 @@ function createElement() {
 addBtn.addEventListener("click", createElement);
 
 document.addEventListener("keyup", function (e) {
-  if (e.key == "Enter") {
+  if (e.shiftKey && e.key == "Enter") {
+    document.createElement("br");
+  } else if (e.key == "Enter") {
     createElement();
-  } else if (e.key == "Shift" && e.key == "Enter") {
-    console.log("I did not add a new element")
   }
 });
 
@@ -42,7 +42,7 @@ function remove(e) {
   if (e.target.classList.contains("btn")) {
     const element = e.target.parentElement.parentElement;
     element.remove() && element.children.remove() && this.textContent.remove();
-    
+
   }
 }
 //when I click the deletBtn remove the element
