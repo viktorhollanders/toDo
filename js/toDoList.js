@@ -33,9 +33,7 @@ function createElement() {
 //the enter AND the shift key have ben pressed, then it makes a new line in the teaxarea
 //or if it was just the enter key and then it adds the toDo list item to the to do list.
 function enter(e) {
-  if (e.shiftKey && e.key == "Enter") {
-    document.createElement("br");
-  } else if (e.key == "Enter") {
+  if (e.key == "Enter") {
     createElement();
   }
 }
@@ -45,8 +43,9 @@ function enter(e) {
 function removeItem(e) {
   if (e.target.classList.contains("btn")) {
     const element = e.target.parentElement.parentElement;
-    element.remove() && element.children.remove() && this.textContent.remove();
-
+    element.classList.add("fade-out");
+    setTimeout(() => element.remove() && element.children.remove() && this.textContent.remove(),
+      200);
   }
 }
 
