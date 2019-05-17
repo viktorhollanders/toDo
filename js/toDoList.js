@@ -19,7 +19,7 @@ function createElement() {
 
   //toDo item remove button
   toDoIconMinus.textContent = "-";
-  toDoIconMinus.style.marginBottom = "6px";
+  toDoIconMinus.style.marginBottom = "3px";
 
   //puts the new toDo list item together
   toDoItem.appendChild(toDoText);
