@@ -80,24 +80,22 @@ div.divider {
 }
 
 div.toDo-item__icon {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
 
   background-color: #000;
 
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
-div.toDo-item__icon span {
-  width: 20px;
-  height: 20px;
+div.toDo-item__icon p {
   color: #fff;
-  text-align: center;
   font-size: 18px;
-  line-height: 1;
+  text-align: center;
+  margin: 0 0 2px 0;
 }
 
 @media only screen and (min-width: 414px) {
