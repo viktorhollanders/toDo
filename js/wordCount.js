@@ -1,9 +1,11 @@
 const inputTag = document.querySelector("textarea");
+let maxWords = inputTag.getAttribute("maxlength");
 
-let counter = 0;
+let count = 0;
 
-inputTag.addEventListener("change", function (e) {
-  console.log(e);
-})
+function wordCount() {
+  
 
+console.log(wordCount());
 
+//inputTag.addEventListener("keypress", wordCount);

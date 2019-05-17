@@ -53,4 +53,5 @@ function removeItem(e) {
 addBtn.addEventListener("click", createElement);
 document.addEventListener("keyup", enter);
 document.addEventListener("click", removeItem);
+document.addEventListener("touchstart", removeItem);
 
