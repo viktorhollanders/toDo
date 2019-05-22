@@ -10,7 +10,7 @@ function wordCount() {
   if (count < maxWords) {
     count = count + 1;
     wordCountTag.innerHTML = count;
-  }
+  } 
 }
 
 // when the input tag is active
