@@ -1,16 +1,26 @@
 const textareaInputTag = document.querySelector("textarea.toDo-input");
 let maxWords = textareaInputTag.getAttribute("maxlength");
-let wordCountTag = document.querySelector("p.wordCount");
+let countTag = document.querySelector("p.wordCount");
 
 let count = 0;
 
-// a function that counts how many words the user has left
-function wordCount() {
-  // if count is less than maxWords add one.
-  if (count < maxWords) {
+// a function that counts how many letters the user has left
+function wordCount(e) {
+  if (e.key === "Backspace") {
+    count = count - 1;
+    countTag.style.display = "inline";
+    updateCount();
+  } else {
     count = count + 1;
-    wordCountTag.innerHTML = count;
-  } 
+    if (count > maxWords) {
+      countTag.style.display = "none";
+    }
+    updateCount();
+  }
+}
+
+function updateCount() {
+  countTag.innerHTML = count;
 }
 
 // when the input tag is active
